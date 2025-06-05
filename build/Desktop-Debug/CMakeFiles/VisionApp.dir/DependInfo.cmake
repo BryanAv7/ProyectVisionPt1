@@ -10,8 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "VisionApp_autogen/timestamp" "custom" "VisionApp_autogen/deps"
   "/home/bryan/proyectoInter/build/Desktop-Debug/VisionApp_autogen/mocs_compilation.cpp" "CMakeFiles/VisionApp.dir/VisionApp_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/VisionApp.dir/VisionApp_autogen/mocs_compilation.cpp.o.d"
-  "/home/bryan/proyectoInter/main.cpp" "CMakeFiles/VisionApp.dir/main.cpp.o" "gcc" "CMakeFiles/VisionApp.dir/main.cpp.o.d"
-  "/home/bryan/proyectoInter/mainwindow.cpp" "CMakeFiles/VisionApp.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/VisionApp.dir/mainwindow.cpp.o.d"
+  "/home/bryan/proyectoInter/src/main.cpp" "CMakeFiles/VisionApp.dir/src/main.cpp.o" "gcc" "CMakeFiles/VisionApp.dir/src/main.cpp.o.d"
+  "/home/bryan/proyectoInter/src/mainwindow.cpp" "CMakeFiles/VisionApp.dir/src/mainwindow.cpp.o" "gcc" "CMakeFiles/VisionApp.dir/src/mainwindow.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

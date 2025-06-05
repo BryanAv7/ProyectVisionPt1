@@ -45,10 +45,10 @@ include_directories(
 
 # 7. Fuentes (fíjate en minúsculas exactas)
 set(SRC_FILES
-    main.cpp
-    mainwindow.cpp
-    mainwindow.h
-    mainwindow.ui
+    src/main.cpp
+    src/mainwindow.cpp
+    src/mainwindow.h
+    src/mainwindow.ui
 )
 
 # 8. Definir ejecutable Qt

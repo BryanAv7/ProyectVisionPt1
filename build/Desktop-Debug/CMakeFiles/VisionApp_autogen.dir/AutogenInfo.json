@@ -340,9 +340,9 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/bryan/proyectoInter/mainwindow.h",
+			"/home/bryan/proyectoInter/src/mainwindow.h",
 			"MU",
-			"EWIEGA46WW/moc_mainwindow.cpp",
+			"UVLADIE3JM/moc_mainwindow.cpp",
 			null
 		]
 	],
@@ -414,8 +414,8 @@
 	"SETTINGS_FILE" : "/home/bryan/proyectoInter/build/Desktop-Debug/CMakeFiles/VisionApp_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
-		[ "/home/bryan/proyectoInter/main.cpp", "MU", null ],
-		[ "/home/bryan/proyectoInter/mainwindow.cpp", "MU", null ]
+		[ "/home/bryan/proyectoInter/src/main.cpp", "MU", null ],
+		[ "/home/bryan/proyectoInter/src/mainwindow.cpp", "MU", null ]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

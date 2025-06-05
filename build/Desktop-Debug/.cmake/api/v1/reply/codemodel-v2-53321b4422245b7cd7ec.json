@@ -6,8 +6,7 @@
 			[
 				{
 					"build" : ".",
-					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-ab4c40541c23510318b4.json",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -30,7 +29,7 @@
 					[
 						0
 					],
-					"name" : "proyectoInter",
+					"name" : "VisionApp",
 					"targetIndexes" : 
 					[
 						0,
@@ -43,23 +42,23 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "proyectoInter::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-proyectoInter-Debug-568c465b996776f5a809.json",
-					"name" : "proyectoInter",
+					"id" : "VisionApp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-VisionApp-Debug-19b38ee0ead0c92fcdc8.json",
+					"name" : "VisionApp",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "proyectoInter_autogen::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-proyectoInter_autogen-Debug-b57e9783c4117c5b8f6c.json",
-					"name" : "proyectoInter_autogen",
+					"id" : "VisionApp_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-VisionApp_autogen-Debug-10c7e4ea759d25dce322.json",
+					"name" : "VisionApp_autogen",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "proyectoInter_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-proyectoInter_autogen_timestamp_deps-Debug-aef269e41f8213b064a7.json",
-					"name" : "proyectoInter_autogen_timestamp_deps",
+					"id" : "VisionApp_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-VisionApp_autogen_timestamp_deps-Debug-dddee61870aab3452238.json",
+					"name" : "VisionApp_autogen_timestamp_deps",
 					"projectIndex" : 0
 				}
 			]

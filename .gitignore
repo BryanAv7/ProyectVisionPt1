@@ -1,0 +1,27 @@
+# Archivos de compilación
+*.o
+*.obj
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+
+# Carpetas de build
+build-*/
+debug/
+release/
+
+# Archivos generados por Qt
+moc_*
+qrc_*
+ui_*
+
+# Archivos temporales
+*.log
+*.user
+*.pro.user
+*.autosave
+
+# Otros
+*.qbs.user

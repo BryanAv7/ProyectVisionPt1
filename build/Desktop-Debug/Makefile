@@ -179,53 +179,53 @@ VisionApp_autogen/mocs_compilation.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionApp.dir/build.make CMakeFiles/VisionApp.dir/VisionApp_autogen/mocs_compilation.cpp.s
 .PHONY : VisionApp_autogen/mocs_compilation.cpp.s
 
-main.o: main.cpp.o
-.PHONY : main.o
+src/main.o: src/main.cpp.o
+.PHONY : src/main.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionApp.dir/build.make CMakeFiles/VisionApp.dir/main.cpp.o
-.PHONY : main.cpp.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionApp.dir/build.make CMakeFiles/VisionApp.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-main.i: main.cpp.i
-.PHONY : main.i
+src/main.i: src/main.cpp.i
+.PHONY : src/main.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionApp.dir/build.make CMakeFiles/VisionApp.dir/main.cpp.i
-.PHONY : main.cpp.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionApp.dir/build.make CMakeFiles/VisionApp.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-main.s: main.cpp.s
-.PHONY : main.s
+src/main.s: src/main.cpp.s
+.PHONY : src/main.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionApp.dir/build.make CMakeFiles/VisionApp.dir/main.cpp.s
-.PHONY : main.cpp.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionApp.dir/build.make CMakeFiles/VisionApp.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-mainwindow.o: mainwindow.cpp.o
-.PHONY : mainwindow.o
+src/mainwindow.o: src/mainwindow.cpp.o
+.PHONY : src/mainwindow.o
 
 # target to build an object file
-mainwindow.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionApp.dir/build.make CMakeFiles/VisionApp.dir/mainwindow.cpp.o
-.PHONY : mainwindow.cpp.o
+src/mainwindow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionApp.dir/build.make CMakeFiles/VisionApp.dir/src/mainwindow.cpp.o
+.PHONY : src/mainwindow.cpp.o
 
-mainwindow.i: mainwindow.cpp.i
-.PHONY : mainwindow.i
+src/mainwindow.i: src/mainwindow.cpp.i
+.PHONY : src/mainwindow.i
 
 # target to preprocess a source file
-mainwindow.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionApp.dir/build.make CMakeFiles/VisionApp.dir/mainwindow.cpp.i
-.PHONY : mainwindow.cpp.i
+src/mainwindow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionApp.dir/build.make CMakeFiles/VisionApp.dir/src/mainwindow.cpp.i
+.PHONY : src/mainwindow.cpp.i
 
-mainwindow.s: mainwindow.cpp.s
-.PHONY : mainwindow.s
+src/mainwindow.s: src/mainwindow.cpp.s
+.PHONY : src/mainwindow.s
 
 # target to generate assembly for a file
-mainwindow.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionApp.dir/build.make CMakeFiles/VisionApp.dir/mainwindow.cpp.s
-.PHONY : mainwindow.cpp.s
+src/mainwindow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/VisionApp.dir/build.make CMakeFiles/VisionApp.dir/src/mainwindow.cpp.s
+.PHONY : src/mainwindow.cpp.s
 
 # Help Target
 help:
@@ -241,12 +241,12 @@ help:
 	@echo "... VisionApp_autogen/mocs_compilation.o"
 	@echo "... VisionApp_autogen/mocs_compilation.i"
 	@echo "... VisionApp_autogen/mocs_compilation.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... mainwindow.o"
-	@echo "... mainwindow.i"
-	@echo "... mainwindow.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
+	@echo "... src/mainwindow.o"
+	@echo "... src/mainwindow.i"
+	@echo "... src/mainwindow.s"
 .PHONY : help
 
 

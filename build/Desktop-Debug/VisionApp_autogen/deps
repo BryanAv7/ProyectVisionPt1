@@ -5,9 +5,9 @@ VisionApp_autogen/timestamp: \
 	/home/bryan/proyectoInter/build/Desktop-Debug/CMakeFiles/3.28.3/CMakeSystem.cmake \
 	/home/bryan/proyectoInter/build/Desktop-Debug/ITKFactoryRegistration/itkImageIOFactoryRegisterManager.h \
 	/home/bryan/proyectoInter/build/Desktop-Debug/VisionApp_autogen/moc_predefs.h \
-	/home/bryan/proyectoInter/main.cpp \
-	/home/bryan/proyectoInter/mainwindow.cpp \
-	/home/bryan/proyectoInter/mainwindow.h \
+	/home/bryan/proyectoInter/src/main.cpp \
+	/home/bryan/proyectoInter/src/mainwindow.cpp \
+	/home/bryan/proyectoInter/src/mainwindow.h \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
@@ -1045,5 +1045,5 @@ VisionApp_autogen/timestamp: \
 	/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/Linux.cmake \
 	/usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake \
-	/home/bryan/proyectoInter/mainwindow.ui \
+	/home/bryan/proyectoInter/src/mainwindow.ui \
 	/usr/bin/cmake

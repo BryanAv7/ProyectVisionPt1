@@ -90,46 +90,46 @@ CMakeFiles/VisionApp.dir/VisionApp_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VisionApp.dir/VisionApp_autogen/mocs_compilation.cpp.s"
 	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bryan/proyectoInter/build/Desktop-Debug/VisionApp_autogen/mocs_compilation.cpp -o CMakeFiles/VisionApp.dir/VisionApp_autogen/mocs_compilation.cpp.s
 
-CMakeFiles/VisionApp.dir/main.cpp.o: CMakeFiles/VisionApp.dir/flags.make
-CMakeFiles/VisionApp.dir/main.cpp.o: /home/bryan/proyectoInter/main.cpp
-CMakeFiles/VisionApp.dir/main.cpp.o: CMakeFiles/VisionApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bryan/proyectoInter/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VisionApp.dir/main.cpp.o"
-	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VisionApp.dir/main.cpp.o -MF CMakeFiles/VisionApp.dir/main.cpp.o.d -o CMakeFiles/VisionApp.dir/main.cpp.o -c /home/bryan/proyectoInter/main.cpp
+CMakeFiles/VisionApp.dir/src/main.cpp.o: CMakeFiles/VisionApp.dir/flags.make
+CMakeFiles/VisionApp.dir/src/main.cpp.o: /home/bryan/proyectoInter/src/main.cpp
+CMakeFiles/VisionApp.dir/src/main.cpp.o: CMakeFiles/VisionApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bryan/proyectoInter/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/VisionApp.dir/src/main.cpp.o"
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VisionApp.dir/src/main.cpp.o -MF CMakeFiles/VisionApp.dir/src/main.cpp.o.d -o CMakeFiles/VisionApp.dir/src/main.cpp.o -c /home/bryan/proyectoInter/src/main.cpp
 
-CMakeFiles/VisionApp.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VisionApp.dir/main.cpp.i"
-	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bryan/proyectoInter/main.cpp > CMakeFiles/VisionApp.dir/main.cpp.i
+CMakeFiles/VisionApp.dir/src/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VisionApp.dir/src/main.cpp.i"
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bryan/proyectoInter/src/main.cpp > CMakeFiles/VisionApp.dir/src/main.cpp.i
 
-CMakeFiles/VisionApp.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VisionApp.dir/main.cpp.s"
-	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bryan/proyectoInter/main.cpp -o CMakeFiles/VisionApp.dir/main.cpp.s
+CMakeFiles/VisionApp.dir/src/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VisionApp.dir/src/main.cpp.s"
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bryan/proyectoInter/src/main.cpp -o CMakeFiles/VisionApp.dir/src/main.cpp.s
 
-CMakeFiles/VisionApp.dir/mainwindow.cpp.o: CMakeFiles/VisionApp.dir/flags.make
-CMakeFiles/VisionApp.dir/mainwindow.cpp.o: /home/bryan/proyectoInter/mainwindow.cpp
-CMakeFiles/VisionApp.dir/mainwindow.cpp.o: CMakeFiles/VisionApp.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bryan/proyectoInter/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VisionApp.dir/mainwindow.cpp.o"
-	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VisionApp.dir/mainwindow.cpp.o -MF CMakeFiles/VisionApp.dir/mainwindow.cpp.o.d -o CMakeFiles/VisionApp.dir/mainwindow.cpp.o -c /home/bryan/proyectoInter/mainwindow.cpp
+CMakeFiles/VisionApp.dir/src/mainwindow.cpp.o: CMakeFiles/VisionApp.dir/flags.make
+CMakeFiles/VisionApp.dir/src/mainwindow.cpp.o: /home/bryan/proyectoInter/src/mainwindow.cpp
+CMakeFiles/VisionApp.dir/src/mainwindow.cpp.o: CMakeFiles/VisionApp.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/bryan/proyectoInter/build/Desktop-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/VisionApp.dir/src/mainwindow.cpp.o"
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/VisionApp.dir/src/mainwindow.cpp.o -MF CMakeFiles/VisionApp.dir/src/mainwindow.cpp.o.d -o CMakeFiles/VisionApp.dir/src/mainwindow.cpp.o -c /home/bryan/proyectoInter/src/mainwindow.cpp
 
-CMakeFiles/VisionApp.dir/mainwindow.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VisionApp.dir/mainwindow.cpp.i"
-	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bryan/proyectoInter/mainwindow.cpp > CMakeFiles/VisionApp.dir/mainwindow.cpp.i
+CMakeFiles/VisionApp.dir/src/mainwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/VisionApp.dir/src/mainwindow.cpp.i"
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bryan/proyectoInter/src/mainwindow.cpp > CMakeFiles/VisionApp.dir/src/mainwindow.cpp.i
 
-CMakeFiles/VisionApp.dir/mainwindow.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VisionApp.dir/mainwindow.cpp.s"
-	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bryan/proyectoInter/mainwindow.cpp -o CMakeFiles/VisionApp.dir/mainwindow.cpp.s
+CMakeFiles/VisionApp.dir/src/mainwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/VisionApp.dir/src/mainwindow.cpp.s"
+	/usr/bin/g++-13 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bryan/proyectoInter/src/mainwindow.cpp -o CMakeFiles/VisionApp.dir/src/mainwindow.cpp.s
 
 # Object files for target VisionApp
 VisionApp_OBJECTS = \
 "CMakeFiles/VisionApp.dir/VisionApp_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/VisionApp.dir/main.cpp.o" \
-"CMakeFiles/VisionApp.dir/mainwindow.cpp.o"
+"CMakeFiles/VisionApp.dir/src/main.cpp.o" \
+"CMakeFiles/VisionApp.dir/src/mainwindow.cpp.o"
 
 # External object files for target VisionApp
 VisionApp_EXTERNAL_OBJECTS =
 
 bin/VisionApp: CMakeFiles/VisionApp.dir/VisionApp_autogen/mocs_compilation.cpp.o
-bin/VisionApp: CMakeFiles/VisionApp.dir/main.cpp.o
-bin/VisionApp: CMakeFiles/VisionApp.dir/mainwindow.cpp.o
+bin/VisionApp: CMakeFiles/VisionApp.dir/src/main.cpp.o
+bin/VisionApp: CMakeFiles/VisionApp.dir/src/mainwindow.cpp.o
 bin/VisionApp: CMakeFiles/VisionApp.dir/build.make
 bin/VisionApp: /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.4.2
 bin/VisionApp: /usr/local/itk/lib/libITKCommon-6.0.a
