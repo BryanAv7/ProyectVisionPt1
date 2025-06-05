@@ -513,7 +513,6 @@ void MainWindow::generarVideoCortes() {
     std::filesystem::create_directories(dirSalida);
     std::string nombreArchivo    = dirSalida + "/transicion.avi";
 
-    // Obtener tamaño de un corte para configurar VideoWriter
     auto primerCorte = extraerCorte<Imagen3DFloat, Imagen2DFloat>(volumenOriginal, 0);
     auto region      = primerCorte->GetLargestPossibleRegion();
     int ancho  = region.GetSize()[0];
@@ -528,12 +527,10 @@ void MainWindow::generarVideoCortes() {
         return;
     }
 
-    // Recorrer cada corte y escribir en el video
     for (unsigned int z = 0; z <= static_cast<unsigned int>(maxCorte); ++z) {
         auto corteOrig = extraerCorte<Imagen3DFloat, Imagen2DFloat>(volumenOriginal, z);
         auto corteMasc = extraerCorte<Imagen3DUChar, Imagen2DUChar>(volumenMascara, z);
 
-        // Mismos pasos de procesamiento de bordes y overlay que en procesarYMostrarCorte
         cv::Mat gris       = convertirAGris(corteOrig);
         cv::Mat mascaraBin = convertirAMascara(corteMasc);
 
@@ -550,6 +547,11 @@ void MainWindow::generarVideoCortes() {
         cv::Mat suavizado;
         cv::medianBlur(claheResult, suavizado, 5);
 
+        // Aquí agregamos el filtro Laplaciano
+        cv::Mat laplace;
+        cv::Laplacian(suavizado, laplace, CV_16S, 3);
+        cv::convertScaleAbs(laplace, laplace);
+
         cv::Mat dilatado;
         cv::Mat kernel = cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(3, 3));
         cv::dilate(suavizado, dilatado, kernel);
@@ -562,7 +564,8 @@ void MainWindow::generarVideoCortes() {
         {
             std::vector<cv::Mat> canales;
             cv::split(colorResult, canales);
-            canales[2] = cv::max(canales[2], bordes);
+            canales[0] = cv::max(canales[0], laplace);  // Azul ← Laplaciano
+            canales[2] = cv::max(canales[2], bordes);   // Rojo ← Canny
             cv::merge(canales, colorResult);
         }
 
@@ -581,5 +584,3 @@ void MainWindow::generarVideoCortes() {
                              QString("Video guardado en:\n%1/transicion.avi")
                                  .arg(QString::fromStdString(dirSalida)));
 }
-
-
