@@ -502,6 +502,7 @@ void MainWindow::guardarTodo() {
 // -------------------------------------------------------------
 //                   GENERAR VIDEO DE CORTES
 // -------------------------------------------------------------
+
 void MainWindow::generarVideoCortes() {
     if (!volumenOriginal || !volumenMascara) {
         QMessageBox::warning(this, "Error", "Primero carga la imagen y la máscara.");
@@ -581,4 +582,4 @@ void MainWindow::generarVideoCortes() {
                                  .arg(QString::fromStdString(dirSalida)));
 }
 
-//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
+
