@@ -261,13 +261,71 @@ void MainWindow::procesarYMostrarCorte(typename Imagen2DFloat::Pointer corteOrig
     calcularEstadisticas(corteOriginal, corteMascara);
 }
 
-void MainWindow::actualizarVisualizacionCorte() {
+void MainWindow::actualizarVisualizacionCorte()
+{
     if (!volumenOriginal || !volumenMascara) return;
 
     try {
         auto corteOrig = extraerCorte<Imagen3DFloat, Imagen2DFloat>(volumenOriginal, corteActual);
         auto corteMasc = extraerCorte<Imagen3DUChar, Imagen2DUChar>(volumenMascara, corteActual);
         procesarYMostrarCorte(corteOrig, corteMasc);
+
+        // Carpeta para la máscara
+        std::string carpetaMascara = "/home/bryan/proyectoInter/Datoscsv/cortecsv/";
+
+        // Carpeta para la imagen original
+        std::string carpetaOriginal = "/home/bryan/proyectoInter/Datoscsv/originalcsv/";
+
+        // Guardar CSV de la imagen original
+        {
+            std::ostringstream nombreArchivo;
+            nombreArchivo << carpetaOriginal << "corte_" << corteActual << "_orig.csv";
+
+            std::ofstream archivo(nombreArchivo.str());
+            if (!archivo.is_open()) {
+                throw std::runtime_error("No se pudo abrir el archivo CSV para escritura (original).");
+            }
+
+            Imagen2DFloat::RegionType region = corteOrig->GetLargestPossibleRegion();
+            Imagen2DFloat::SizeType size = region.GetSize();
+
+            for (unsigned int y = 0; y < size[1]; ++y) {
+                for (unsigned int x = 0; x < size[0]; ++x) {
+                    Imagen2DFloat::IndexType idx = {{x, y}};
+                    float valor = corteOrig->GetPixel(idx);
+                    archivo << valor;
+                    if (x < size[0] - 1) archivo << ",";
+                }
+                archivo << "\n";
+            }
+            archivo.close();
+        }
+
+        // Guardar CSV de la máscara
+        {
+            std::ostringstream nombreArchivo;
+            nombreArchivo << carpetaMascara << "corte_" << corteActual << "_mask.csv";
+
+            std::ofstream archivo(nombreArchivo.str());
+            if (!archivo.is_open()) {
+                throw std::runtime_error("No se pudo abrir el archivo CSV para escritura (máscara).");
+            }
+
+            Imagen2DUChar::RegionType region = corteMasc->GetLargestPossibleRegion();
+            Imagen2DUChar::SizeType size = region.GetSize();
+
+            for (unsigned int y = 0; y < size[1]; ++y) {
+                for (unsigned int x = 0; x < size[0]; ++x) {
+                    Imagen2DUChar::IndexType idx = {{x, y}};
+                    unsigned char valor = corteMasc->GetPixel(idx);
+                    archivo << static_cast<int>(valor);
+                    if (x < size[0] - 1) archivo << ",";
+                }
+                archivo << "\n";
+            }
+            archivo.close();
+        }
+
     }
     catch (const std::exception &e) {
         QMessageBox::warning(this, "Error", e.what());
@@ -363,7 +421,7 @@ void MainWindow::guardarTodo() {
         this,
         "Guardar Máscara del Corte",
         QString::fromStdString(dirCortes + "/corte_mascara.png"),
-        "PNG Files (*.png>");
+        "PNG Files (*.png)");
     if (!rutaMasc.isEmpty()) {
         auto corteMasc = extraerCorte<Imagen3DUChar, Imagen2DUChar>(volumenMascara, corteActual);
         cv::Mat masc = convertirAMascara(corteMasc);
@@ -375,7 +433,7 @@ void MainWindow::guardarTodo() {
         this,
         "Guardar Resultado (bordes + overlay)",
         QString::fromStdString(dirResultados + "/corte_resultado.png"),
-        "PNG Files (*.png>");
+        "PNG Files (*.png)");
     if (!rutaRes.isEmpty()) {
         cv::imwrite(rutaRes.toStdString(), resultadoGlobal);
     }
@@ -385,7 +443,7 @@ void MainWindow::guardarTodo() {
         this,
         "Guardar Estadísticas",
         QString::fromStdString(dirResultados + "/corte_estadisticas.txt"),
-        "Text Files (*.txt>");
+        "Text Files (*.txt)");
     if (!rutaStats.isEmpty()) {
         auto corteOrig = extraerCorte<Imagen3DFloat, Imagen2DFloat>(volumenOriginal, corteActual);
         auto corteMasc = extraerCorte<Imagen3DUChar, Imagen2DUChar>(volumenMascara, corteActual);
@@ -410,18 +468,26 @@ void MainWindow::guardarTodo() {
             }
         }
 
+        std::ofstream archivo(rutaStats.toStdString());
+        if (!archivo.is_open()) {
+            QMessageBox::warning(this, "Error", "No se pudo abrir el archivo para estadísticas.");
+            return;
+        }
+
         if (cnt > 0) {
             double media  = suma / cnt;
             double stddev = std::sqrt((sumaSq / cnt) - (media * media));
-            std::ofstream ofs(rutaStats.toStdString());
-            ofs << "Corte: " << corteActual << "\n";
-            ofs << "Media (segmentada): " << media << "\n";
-            ofs << "Desviación estándar: " << stddev << "\n";
-            ofs << "Mínimo: " << minV << "\n";
-            ofs << "Máximo: " << maxV << "\n";
-            ofs << "Píxeles segmentados: " << cnt << "\n";
-            ofs.close();
+
+            archivo << "Media (región segmentada): " << media << "\n";
+            archivo << "Desviación estándar: "       << stddev << "\n";
+            archivo << "Mínimo (segmentado): "       << minV << "\n";
+            archivo << "Máximo (segmentado): "       << maxV << "\n";
+            archivo << "Píxeles segmentados: "       << cnt  << "\n";
+        } else {
+            archivo << "Corte sin región segmentada.\n";
         }
+
+        archivo.close();
     }
 }
 
