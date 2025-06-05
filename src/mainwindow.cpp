@@ -217,6 +217,11 @@ void MainWindow::procesarYMostrarCorte(typename Imagen2DFloat::Pointer corteOrig
     cv::Mat suavizado;
     cv::medianBlur(claheResult, suavizado, 5);
 
+    // 3.2.1) Filtro Laplaciano para bordes internos suaves
+    cv::Mat laplace;
+    cv::Laplacian(suavizado, laplace, CV_16S, 3);
+    cv::convertScaleAbs(laplace, laplace);
+
     // 3.3) Dilatación opcional para realzar bordes internos
     cv::Mat dilatado;
     cv::Mat kernel = cv::getStructuringElement(cv::MORPH_ELLIPSE, cv::Size(3, 3));
@@ -226,13 +231,15 @@ void MainWindow::procesarYMostrarCorte(typename Imagen2DFloat::Pointer corteOrig
     cv::Mat bordes;
     cv::Canny(dilatado, bordes, 30, 100);
 
-    // 4) Superponer bordes en canal rojo sobre la imagen en escala de grises original
+    // 4) Superponer bordes Canny (rojo) y Laplaciano (azul) sobre la imagen en escala de grises original
     cv::Mat colorResult;
     cv::cvtColor(gris, colorResult, cv::COLOR_GRAY2BGR);
     {
         std::vector<cv::Mat> canales;
         cv::split(colorResult, canales);
-        // Aumentamos el canal rojo donde haya bordes
+        // Canal azul ← bordes Laplacianos
+        canales[0] = cv::max(canales[0], laplace);
+        // Canal rojo ← bordes Canny
         canales[2] = cv::max(canales[2], bordes);
         cv::merge(canales, colorResult);
     }
@@ -260,6 +267,7 @@ void MainWindow::procesarYMostrarCorte(typename Imagen2DFloat::Pointer corteOrig
     // 6) Calcular y mostrar estadísticas solo en región segmentada
     calcularEstadisticas(corteOriginal, corteMascara);
 }
+
 
 void MainWindow::actualizarVisualizacionCorte()
 {
@@ -572,3 +580,5 @@ void MainWindow::generarVideoCortes() {
                              QString("Video guardado en:\n%1/transicion.avi")
                                  .arg(QString::fromStdString(dirSalida)));
 }
+
+//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
