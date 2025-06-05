@@ -1,0 +1,1385 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/Desktop-Debug/.qtc/package-manager/auto-setup.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/Desktop-Debug/CMakeFiles/3.28.3/CMakeSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/Desktop-Debug/CMakeFiles/3.28.3/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/Platform/Linux.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigExtras.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6VersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeature.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeatureCommon.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CheckCXXCompilerFlag.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/Internal/CheckCompilerFlag.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/Internal/CheckFlagCommonConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/Internal/CheckSourceCompiles.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicAppleHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFinalizerHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicPluginHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicTargetHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicWalkLibsHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFindPackageHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicTestHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicToolHelpers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeHelpers.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Dependencies.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindThreads.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CheckLibraryExists.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CheckIncludeFileCXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets-none.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets-none.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-none.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapAtomic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CheckCXXSourceCompiles.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreTargets-none.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigExtras.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/GNUInstallDirs.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindOpenGL.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/3rdparty/kwin/FindXKB.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPkgConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FeatureSummary.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapVulkanHeaders.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindVulkan.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets-none.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusTargets-none.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/MacroAddFileDependencies.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiTargets-none.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets-none.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/ITKConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/ITKConfig.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/ITKTargets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/ITKTargets-release.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/ITKModuleAPI.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKDoubleConversion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKEigen3.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKInternalEigen3ConfigVersion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKInternalEigen3Config.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKInternalEigen3Targets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKKWSys.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKVNL.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKCommon.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKFiniteDifference.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageFilterBase.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKCurvatureFlow.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageAdaptors.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKNetlib.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKStatistics.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKTransform.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageFunction.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageGrid.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKAnisotropicSmoothing.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageCompose.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKMesh.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKZLIB.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKMetaIO.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKSpatialObjects.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageStatistics.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKPath.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageIntensity.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageLabel.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKLabelMap.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKThresholding.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKConnectedComponents.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKMathematicalMorphology.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKBinaryMathematicalMorphology.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKNarrowBand.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKDistanceMap.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKQuadEdgeMesh.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKFastMarching.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOImageBase.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageCompare.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKFFT.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKConvolution.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageSources.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKSmoothing.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageGradient.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageFeature.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKOptimizers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKSignedDistanceFunction.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKLevelSets.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKAntiAlias.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKPolynomials.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKBiasCorrection.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKClassifiers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKColormap.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKDICOMParser.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKDeconvolution.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKDeformableMesh.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKDenoising.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKDiffusionTensorImage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKDisplacementField.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKEigen.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKExpat.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKOpenJPEG.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKGDCM.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKNIFTI.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKGIFTI.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKGPUCommon.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKGPUFiniteDifference.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKGPUAnisotropicSmoothing.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKGPUImageFilterBase.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKGPURegistrationCommon.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKRegistrationCommon.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKPDEDeformableRegistration.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKGPUPDEDeformableRegistration.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKGPUSmoothing.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKGPUThresholding.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKGoogleTest.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKHDF5.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOBMP.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOBioRad.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOBruker.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOCSV.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOGDCM.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOIPL.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOGE.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOGIPL.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOHDF5.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKJPEG.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOJPEG.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOJPEG2000.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKTIFF.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOTIFF.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOLSM.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKMINC.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOMINC.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOMRC.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKVoronoi.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOMeshBase.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOMeshBYU.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOMeshFreeSurfer.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOMeshGifti.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOMeshOBJ.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOMeshOFF.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOMeshVTK.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOMesh.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOMeta.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIONIFTI.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKNrrdIO.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIONRRD.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKPNG.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOPNG.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIORAW.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOSiemens.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOXML.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOSpatialObjects.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOStimulate.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKTransformFactory.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOTransformBase.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOTransformHDF5.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOTransformInsightLegacy.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOTransformMatlab.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIOVTK.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageFrequency.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageFusion.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKImageNoise.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKIntegratedTest.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKKLMRegionGrowing.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKLIBLBFGS.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKLabelVoting.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKLevelSetsv4.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKMarkovRandomFieldsClassifiers.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKOptimizersv4.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKMetricsv4.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKQuadEdgeMeshFiltering.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKRegionGrowing.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKRegistrationMethodsv4.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKSpatialFunction.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKSuperPixel.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKTestKernel.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKVTK.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKVideoCore.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKVideoFiltering.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKVideoIO.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/Modules/ITKWatersheds.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/ITKFactoryRegistration.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/UseITK.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/ITKInitializeCXXStandard.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/local/itk/lib/cmake/ITK-6.0/itkImageIOFactoryRegisterManager.h.in"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig-version.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVConfig.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/usr/share/cmake-3.28/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules.cmake"
+		},
+		{
+			"isExternal" : true,
+			"path" : "/usr/lib/x86_64-linux-gnu/cmake/opencv4/OpenCVModules-release.cmake"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/home/bryan/proyectoInter/build/Desktop-Debug",
+		"source" : "/home/bryan/proyectoInter"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

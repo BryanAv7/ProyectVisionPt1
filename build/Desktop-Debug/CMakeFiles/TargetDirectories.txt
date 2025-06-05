@@ -1,0 +1,5 @@
+/home/bryan/proyectoInter/build/Desktop-Debug/CMakeFiles/VisionApp.dir
+/home/bryan/proyectoInter/build/Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/bryan/proyectoInter/build/Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/bryan/proyectoInter/build/Desktop-Debug/CMakeFiles/VisionApp_autogen_timestamp_deps.dir
+/home/bryan/proyectoInter/build/Desktop-Debug/CMakeFiles/VisionApp_autogen.dir
