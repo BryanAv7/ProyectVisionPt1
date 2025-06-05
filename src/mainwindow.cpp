@@ -407,8 +407,12 @@ void MainWindow::cargarMascara() {
 //                 GUARDAR TODO (IMÁGENES Y ESTADÍSTICAS)
 // -------------------------------------------------------------
 void MainWindow::guardarTodo() {
-    const std::string dirCortes     = "/home/bryan/proyectoInter/build/Desktop-Debug/bin/cortesegmentado";
-    const std::string dirResultados = "/home/bryan/proyectoInter/build/Desktop-Debug/bin/resultados";
+    const std::string dirOriginal     = "/home/bryan/proyectoInter/Resultados/Original";
+    const std::string dirCortes     = "/home/bryan/proyectoInter/Resultados/Mascara/";
+    const std::string dirResultados = "/home/bryan/proyectoInter/Resultados/ResultadoFinal/";
+    const std::string dirEstadisticas = "/home/bryan/proyectoInter/Resultados/Estadisticas";
+    std::filesystem::create_directories(dirEstadisticas);
+    std::filesystem::create_directories(dirOriginal);
     std::filesystem::create_directories(dirCortes);
     std::filesystem::create_directories(dirResultados);
 
@@ -416,7 +420,7 @@ void MainWindow::guardarTodo() {
     QString rutaOrig = QFileDialog::getSaveFileName(
         this,
         "Guardar Corte Original",
-        QString::fromStdString(dirCortes + "/corte_original.png"),
+        QString::fromStdString(dirOriginal + "/corte_original.png"),
         "PNG Files (*.png)");
     if (!rutaOrig.isEmpty()) {
         auto corteOrig = extraerCorte<Imagen3DFloat, Imagen2DFloat>(volumenOriginal, corteActual);
@@ -436,7 +440,7 @@ void MainWindow::guardarTodo() {
         cv::imwrite(rutaMasc.toStdString(), masc);
     }
 
-    // 3) Guardar imagen procesada con bordes y overlay en PNG
+    // 3) Guardar imagen procesada
     QString rutaRes = QFileDialog::getSaveFileName(
         this,
         "Guardar Resultado (bordes + overlay)",
@@ -450,7 +454,7 @@ void MainWindow::guardarTodo() {
     QString rutaStats = QFileDialog::getSaveFileName(
         this,
         "Guardar Estadísticas",
-        QString::fromStdString(dirResultados + "/corte_estadisticas.txt"),
+        QString::fromStdString(dirEstadisticas + "/corte_estadisticas.txt"),
         "Text Files (*.txt)");
     if (!rutaStats.isEmpty()) {
         auto corteOrig = extraerCorte<Imagen3DFloat, Imagen2DFloat>(volumenOriginal, corteActual);
@@ -509,7 +513,7 @@ void MainWindow::generarVideoCortes() {
         return;
     }
 
-    const std::string dirSalida  = "/home/bryan/proyectoInter/build/Desktop-Debug/bin";
+    const std::string dirSalida  = "/home/bryan/proyectoInter/Videogenerado/";
     std::filesystem::create_directories(dirSalida);
     std::string nombreArchivo    = dirSalida + "/transicion.avi";
 
