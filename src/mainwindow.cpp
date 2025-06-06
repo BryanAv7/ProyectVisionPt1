@@ -351,7 +351,7 @@ void MainWindow::cargarImagen() {
 }
 
 void MainWindow::cargarMascara() {
-    // ✅ Usar la ruta del volumen original como directorio inicial si está disponible
+
     const QString directorio = rutaImagenOriginal.isEmpty()
                                    ? "/home/bryan/Documentos/imagenes"
                                    : rutaImagenOriginal;
