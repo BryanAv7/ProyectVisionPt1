@@ -1,0 +1,5 @@
+Media (región segmentada): 480.593
+Desviación estándar: 122.994
+Mínimo (segmentado): 157
+Máximo (segmentado): 981
+Píxeles segmentados: 3404

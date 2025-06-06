@@ -35,6 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->btnLoadImage, &QPushButton::clicked, this, &MainWindow::cargarImagen);
     connect(ui->btnLoadMask,  &QPushButton::clicked, this, &MainWindow::cargarMascara);
     connect(ui->btnSaveAll,   &QPushButton::clicked, this, &MainWindow::guardarTodo);
+    connect(ui->btnClear,     &QPushButton::clicked, this, &MainWindow::limpiarInterfaz);
 
     // Deshabilitamos el botón “Guardar todo” hasta tener ambos volúmenes
     ui->btnSaveAll->setEnabled(false);
@@ -43,6 +44,40 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow() {
     delete ui;
 }
+
+
+// -------------------------------------------------------------
+//           IMPLEMENTACIÓN DE LA FUNCION LIMPIAR(extra)
+// -------------------------------------------------------------
+
+void MainWindow::limpiarInterfaz()
+{
+    // Limpiar imágenes mostradas en QLabel
+    ui->lblOriginalSlice->clear();
+    ui->lblMaskSlice->clear();
+    ui->lblResultSlice->clear();
+
+    // Limpiar texto de estadísticas
+    ui->txtStats->clear();
+
+    // Resetear variables relacionadas con el volumen y el corte actual
+    volumenOriginal = nullptr;
+    volumenMascara = nullptr;
+
+    // Reiniciar el índice de corte y el máximo
+    corteActual = 0;
+    maxCorte = 0;
+
+    // Deshabilitar botones que dependen de datos cargados
+    ui->btnSaveAll->setEnabled(false);
+
+    // Limpiar ruta guardada
+    rutaImagenOriginal.clear();
+
+    // Limpiar imagen resultado global
+    resultadoGlobal.release();
+}
+
 
 // -------------------------------------------------------------
 //           IMPLEMENTACIÓN DE FUNCIONES AUXILIARES
@@ -277,63 +312,6 @@ void MainWindow::actualizarVisualizacionCorte()
         auto corteOrig = extraerCorte<Imagen3DFloat, Imagen2DFloat>(volumenOriginal, corteActual);
         auto corteMasc = extraerCorte<Imagen3DUChar, Imagen2DUChar>(volumenMascara, corteActual);
         procesarYMostrarCorte(corteOrig, corteMasc);
-
-        // Carpeta para la máscara
-        std::string carpetaMascara = "/home/bryan/proyectoInter/Datoscsv/cortecsv/";
-
-        // Carpeta para la imagen original
-        std::string carpetaOriginal = "/home/bryan/proyectoInter/Datoscsv/originalcsv/";
-
-        // Guardar CSV de la imagen original
-        {
-            std::ostringstream nombreArchivo;
-            nombreArchivo << carpetaOriginal << "corte_" << corteActual << "_orig.csv";
-
-            std::ofstream archivo(nombreArchivo.str());
-            if (!archivo.is_open()) {
-                throw std::runtime_error("No se pudo abrir el archivo CSV para escritura (original).");
-            }
-
-            Imagen2DFloat::RegionType region = corteOrig->GetLargestPossibleRegion();
-            Imagen2DFloat::SizeType size = region.GetSize();
-
-            for (unsigned int y = 0; y < size[1]; ++y) {
-                for (unsigned int x = 0; x < size[0]; ++x) {
-                    Imagen2DFloat::IndexType idx = {{x, y}};
-                    float valor = corteOrig->GetPixel(idx);
-                    archivo << valor;
-                    if (x < size[0] - 1) archivo << ",";
-                }
-                archivo << "\n";
-            }
-            archivo.close();
-        }
-
-        // Guardar CSV de la máscara
-        {
-            std::ostringstream nombreArchivo;
-            nombreArchivo << carpetaMascara << "corte_" << corteActual << "_mask.csv";
-
-            std::ofstream archivo(nombreArchivo.str());
-            if (!archivo.is_open()) {
-                throw std::runtime_error("No se pudo abrir el archivo CSV para escritura (máscara).");
-            }
-
-            Imagen2DUChar::RegionType region = corteMasc->GetLargestPossibleRegion();
-            Imagen2DUChar::SizeType size = region.GetSize();
-
-            for (unsigned int y = 0; y < size[1]; ++y) {
-                for (unsigned int x = 0; x < size[0]; ++x) {
-                    Imagen2DUChar::IndexType idx = {{x, y}};
-                    unsigned char valor = corteMasc->GetPixel(idx);
-                    archivo << static_cast<int>(valor);
-                    if (x < size[0] - 1) archivo << ",";
-                }
-                archivo << "\n";
-            }
-            archivo.close();
-        }
-
     }
     catch (const std::exception &e) {
         QMessageBox::warning(this, "Error", e.what());
@@ -344,7 +322,7 @@ void MainWindow::actualizarVisualizacionCorte()
 //                CARGA DE IMAGEN Y MÁSCARA
 // -------------------------------------------------------------
 void MainWindow::cargarImagen() {
-    const QString directorio = "/home/bryan/proyectoInter/build/Desktop-Debug/bin";
+    const QString directorio = "/home/bryan/Documentos/imagenes";
     QString nombreArchivo = QFileDialog::getOpenFileName(
         this,
         "Seleccionar Imagen Original (.nii)",
@@ -359,6 +337,10 @@ void MainWindow::cargarImagen() {
         return;
     }
 
+    // ✅ Guardar la ruta del archivo seleccionado
+    QFileInfo infoArchivo(nombreArchivo);
+    rutaImagenOriginal = infoArchivo.absolutePath();
+
     if (volumenMascara) {
         auto tamaño = volumenOriginal->GetLargestPossibleRegion().GetSize();
         maxCorte = static_cast<int>(tamaño[2]) - 1;
@@ -369,7 +351,11 @@ void MainWindow::cargarImagen() {
 }
 
 void MainWindow::cargarMascara() {
-    const QString directorio = "/home/bryan/proyectoInter/build/Desktop-Debug/bin";
+    // ✅ Usar la ruta del volumen original como directorio inicial si está disponible
+    const QString directorio = rutaImagenOriginal.isEmpty()
+                                   ? "/home/bryan/Documentos/imagenes"
+                                   : rutaImagenOriginal;
+
     QString nombreArchivo = QFileDialog::getOpenFileName(
         this,
         "Seleccionar Máscara (.nii)",
@@ -398,133 +384,197 @@ void MainWindow::cargarMascara() {
         ui->btnSaveAll->setEnabled(true);
         actualizarVisualizacionCorte();
 
-        // Generar video automáticamente al cargar ambos volúmenes
-        generarVideoCortes();
     }
 }
+
+
+// -------------------------------------------------------------
+//                   FUNCION AUXILIAR(guardarTodo)
+// -------------------------------------------------------------
+
+std::string MainWindow::generarNombreUnico(const std::string& rutaBase, const std::string& extension) {
+    namespace fs = std::filesystem;
+
+    if (!fs::exists(rutaBase + extension)) {
+        return rutaBase + extension;
+    }
+
+    int contador = 1;
+    std::string nuevaRuta;
+    do {
+        std::ostringstream oss;
+        oss << rutaBase << "_" << contador << extension;
+        nuevaRuta = oss.str();
+        contador++;
+    } while (fs::exists(nuevaRuta));
+
+    return nuevaRuta;
+}
+
 
 // -------------------------------------------------------------
 //                 GUARDAR TODO (IMÁGENES Y ESTADÍSTICAS)
 // -------------------------------------------------------------
 void MainWindow::guardarTodo() {
-    const std::string dirOriginal     = "/home/bryan/proyectoInter/Resultados/Original";
-    const std::string dirCortes     = "/home/bryan/proyectoInter/Resultados/Mascara/";
-    const std::string dirResultados = "/home/bryan/proyectoInter/Resultados/ResultadoFinal/";
-    const std::string dirEstadisticas = "/home/bryan/proyectoInter/Resultados/Estadisticas";
-    std::filesystem::create_directories(dirEstadisticas);
-    std::filesystem::create_directories(dirOriginal);
-    std::filesystem::create_directories(dirCortes);
-    std::filesystem::create_directories(dirResultados);
+    const std::string dirOriginal     = "/home/bryan/proyectoInter/Resultados/Original/";
+    const std::string dirCortes       = "/home/bryan/proyectoInter/Resultados/Mascara/";
+    const std::string dirResultados   = "/home/bryan/proyectoInter/Resultados/ResultadoFinal/";
+    const std::string dirEstadisticas = "/home/bryan/proyectoInter/Resultados/Estadisticas/";
+    const std::string dirCsvOriginal  = "/home/bryan/proyectoInter/Datoscsv/originalcsv/";
+    const std::string dirCsvCorte     = "/home/bryan/proyectoInter/Datoscsv/cortecsv/";
 
-    // 1) Guardar corte original en PNG
-    QString rutaOrig = QFileDialog::getSaveFileName(
-        this,
-        "Guardar Corte Original",
-        QString::fromStdString(dirOriginal + "/corte_original.png"),
-        "PNG Files (*.png)");
-    if (!rutaOrig.isEmpty()) {
-        auto corteOrig = extraerCorte<Imagen3DFloat, Imagen2DFloat>(volumenOriginal, corteActual);
-        cv::Mat gris = convertirAGris(corteOrig);
-        cv::imwrite(rutaOrig.toStdString(), gris);
-    }
+    // Extraer cortes necesarios una vez
+    auto corteOrig = extraerCorte<Imagen3DFloat, Imagen2DFloat>(volumenOriginal, corteActual);
+    auto corteMasc = extraerCorte<Imagen3DUChar, Imagen2DUChar>(volumenMascara, corteActual);
+
+    // 1) Guardar corte original en PNG (nombre base)
+    std::string baseOrig = dirOriginal + "corte_original";
+    std::string rutaOrig = generarNombreUnico(baseOrig, ".png");
+    cv::Mat gris = convertirAGris(corteOrig);
+    cv::imwrite(rutaOrig, gris);
 
     // 2) Guardar máscara del corte en PNG
-    QString rutaMasc = QFileDialog::getSaveFileName(
-        this,
-        "Guardar Máscara del Corte",
-        QString::fromStdString(dirCortes + "/corte_mascara.png"),
-        "PNG Files (*.png)");
-    if (!rutaMasc.isEmpty()) {
-        auto corteMasc = extraerCorte<Imagen3DUChar, Imagen2DUChar>(volumenMascara, corteActual);
-        cv::Mat masc = convertirAMascara(corteMasc);
-        cv::imwrite(rutaMasc.toStdString(), masc);
-    }
+    std::string baseMasc = dirCortes + "corte_mascara";
+    std::string rutaMasc = generarNombreUnico(baseMasc, ".png");
+    cv::Mat masc = convertirAMascara(corteMasc);
+    cv::imwrite(rutaMasc, masc);
 
-    // 3) Guardar imagen procesada
-    QString rutaRes = QFileDialog::getSaveFileName(
-        this,
-        "Guardar Resultado (bordes + overlay)",
-        QString::fromStdString(dirResultados + "/corte_resultado.png"),
-        "PNG Files (*.png)");
-    if (!rutaRes.isEmpty()) {
-        cv::imwrite(rutaRes.toStdString(), resultadoGlobal);
-    }
+    // 3) Guardar imagen procesada (resultado)
+    std::string baseRes = dirResultados + "corte_resultado";
+    std::string rutaRes = generarNombreUnico(baseRes, ".png");
+    cv::imwrite(rutaRes, resultadoGlobal);
 
     // 4) Guardar estadísticas en TXT
-    QString rutaStats = QFileDialog::getSaveFileName(
-        this,
-        "Guardar Estadísticas",
-        QString::fromStdString(dirEstadisticas + "/corte_estadisticas.txt"),
-        "Text Files (*.txt)");
-    if (!rutaStats.isEmpty()) {
-        auto corteOrig = extraerCorte<Imagen3DFloat, Imagen2DFloat>(volumenOriginal, corteActual);
-        auto corteMasc = extraerCorte<Imagen3DUChar, Imagen2DUChar>(volumenMascara, corteActual);
+    std::string baseStats = dirEstadisticas + "corte_estadisticas";
+    std::string rutaStats = generarNombreUnico(baseStats, ".txt");
 
-        auto region = corteOrig->GetLargestPossibleRegion();
-        itk::ImageRegionConstIterator<Imagen2DFloat> itOrig(corteOrig, region);
-        itk::ImageRegionConstIterator<Imagen2DUChar> itMasc(corteMasc, region);
+    auto region = corteOrig->GetLargestPossibleRegion();
+    itk::ImageRegionConstIterator<Imagen2DFloat> itOrig(corteOrig, region);
+    itk::ImageRegionConstIterator<Imagen2DUChar> itMasc(corteMasc, region);
 
-        double suma   = 0.0, sumaSq = 0.0;
-        double minV   = std::numeric_limits<double>::max();
-        double maxV   = std::numeric_limits<double>::lowest();
-        int cnt       = 0;
+    double suma   = 0.0, sumaSq = 0.0;
+    double minV   = std::numeric_limits<double>::max();
+    double maxV   = std::numeric_limits<double>::lowest();
+    int cnt       = 0;
 
-        for (itOrig.GoToBegin(), itMasc.GoToBegin(); !itOrig.IsAtEnd(); ++itOrig, ++itMasc) {
-            if (itMasc.Get() > 0) {
-                double v = itOrig.Get();
-                suma   += v;
-                sumaSq += v * v;
-                minV    = std::min(minV, v);
-                maxV    = std::max(maxV, v);
-                cnt++;
-            }
+    for (itOrig.GoToBegin(), itMasc.GoToBegin(); !itOrig.IsAtEnd(); ++itOrig, ++itMasc) {
+        if (itMasc.Get() > 0) {
+            double v = itOrig.Get();
+            suma   += v;
+            sumaSq += v * v;
+            minV    = std::min(minV, v);
+            maxV    = std::max(maxV, v);
+            cnt++;
         }
-
-        std::ofstream archivo(rutaStats.toStdString());
-        if (!archivo.is_open()) {
-            QMessageBox::warning(this, "Error", "No se pudo abrir el archivo para estadísticas.");
-            return;
-        }
-
-        if (cnt > 0) {
-            double media  = suma / cnt;
-            double stddev = std::sqrt((sumaSq / cnt) - (media * media));
-
-            archivo << "Media (región segmentada): " << media << "\n";
-            archivo << "Desviación estándar: "       << stddev << "\n";
-            archivo << "Mínimo (segmentado): "       << minV << "\n";
-            archivo << "Máximo (segmentado): "       << maxV << "\n";
-            archivo << "Píxeles segmentados: "       << cnt  << "\n";
-        } else {
-            archivo << "Corte sin región segmentada.\n";
-        }
-
-        archivo.close();
     }
+
+    std::ofstream archivoStats(rutaStats);
+    if (!archivoStats.is_open()) {
+        QMessageBox::warning(this, "Error", "No se pudo abrir el archivo para estadísticas.");
+        return;
+    }
+
+    if (cnt > 0) {
+        double media  = suma / cnt;
+        double stddev = std::sqrt((sumaSq / cnt) - (media * media));
+
+        archivoStats << "Media (región segmentada): " << media << "\n";
+        archivoStats << "Desviación estándar: "       << stddev << "\n";
+        archivoStats << "Mínimo (segmentado): "       << minV << "\n";
+        archivoStats << "Máximo (segmentado): "       << maxV << "\n";
+        archivoStats << "Píxeles segmentados: "       << cnt  << "\n";
+    } else {
+        archivoStats << "Corte sin región segmentada.\n";
+    }
+    archivoStats.close();
+
+    // 5) Guardar CSV de la imagen original
+    std::string baseCsvOrig = dirCsvOriginal + "corte_" + std::to_string(corteActual) + "_orig";
+    std::string pathCsvOrig = generarNombreUnico(baseCsvOrig, ".csv");
+
+    std::ofstream archivoCSVOrig(pathCsvOrig);
+    if (!archivoCSVOrig.is_open()) {
+        QMessageBox::warning(this, "Error", "No se pudo abrir el archivo CSV de la imagen original.");
+        return;
+    }
+
+    int widthOrig = region.GetSize()[0];
+    int heightOrig = region.GetSize()[1];
+    for (int y = 0; y < heightOrig; ++y) {
+        for (int x = 0; x < widthOrig; ++x) {
+            Imagen2DFloat::IndexType idx;
+            idx[0] = x;
+            idx[1] = y;
+            archivoCSVOrig << corteOrig->GetPixel(idx);
+            if (x < widthOrig - 1)
+                archivoCSVOrig << ",";
+        }
+        archivoCSVOrig << "\n";
+    }
+    archivoCSVOrig.close();
+
+    // 6) Guardar CSV de la máscara
+    std::string baseCsvMasc = dirCsvCorte + "corte_" + std::to_string(corteActual) + "_mask";
+    std::string pathCsvMasc = generarNombreUnico(baseCsvMasc, ".csv");
+
+    std::ofstream archivoCSVMasc(pathCsvMasc);
+    if (!archivoCSVMasc.is_open()) {
+        QMessageBox::warning(this, "Error", "No se pudo abrir el archivo CSV de la máscara.");
+        return;
+    }
+
+    int widthMasc = region.GetSize()[0];
+    int heightMasc = region.GetSize()[1];
+    for (int y = 0; y < heightMasc; ++y) {
+        for (int x = 0; x < widthMasc; ++x) {
+            Imagen2DUChar::IndexType idx;
+            idx[0] = x;
+            idx[1] = y;
+            archivoCSVMasc << static_cast<int>(corteMasc->GetPixel(idx));
+            if (x < widthMasc - 1)
+                archivoCSVMasc << ",";
+        }
+        archivoCSVMasc << "\n";
+    }
+    archivoCSVMasc.close();
+
+    // 7) Guardar video de cortes
+    std::string dirVideo = "/home/bryan/proyectoInter/Videogenerado/";
+    std::string baseVideo = dirVideo + "video_corte_" + std::to_string(corteActual);
+    std::string nombreVideo = generarNombreUnico(baseVideo, ".avi");
+
+    generarVideoCortes(nombreVideo);
+
+    // Mensaje de Confirmación
+    QMessageBox msgBox(this);
+    msgBox.setWindowTitle("Guardado");
+    msgBox.setText("✅ Guardado exitoso.✅ ");
+    msgBox.setIcon(QMessageBox::Information);
+    msgBox.setStandardButtons(QMessageBox::Ok);
+    msgBox.exec();
 }
+
 
 // -------------------------------------------------------------
 //                   GENERAR VIDEO DE CORTES
 // -------------------------------------------------------------
 
-void MainWindow::generarVideoCortes() {
+void MainWindow::generarVideoCortes(const std::string& nombreArchivoVideo) {
     if (!volumenOriginal || !volumenMascara) {
         QMessageBox::warning(this, "Error", "Primero carga la imagen y la máscara.");
         return;
     }
 
-    const std::string dirSalida  = "/home/bryan/proyectoInter/Videogenerado/";
-    std::filesystem::create_directories(dirSalida);
-    std::string nombreArchivo    = dirSalida + "/transicion.avi";
+    std::filesystem::create_directories("/home/bryan/proyectoInter/Videogenerado/");
 
     auto primerCorte = extraerCorte<Imagen3DFloat, Imagen2DFloat>(volumenOriginal, 0);
     auto region      = primerCorte->GetLargestPossibleRegion();
-    int ancho  = region.GetSize()[0];
-    int alto   = region.GetSize()[1];
+    int ancho = region.GetSize()[0];
+    int alto  = region.GetSize()[1];
 
     int fourcc = cv::VideoWriter::fourcc('M','J','P','G');
     double fps = 10.0;
-    cv::VideoWriter writer(nombreArchivo, fourcc, fps, cv::Size(ancho, alto));
+    cv::VideoWriter writer(nombreArchivoVideo, fourcc, fps, cv::Size(ancho, alto));
 
     if (!writer.isOpened()) {
         QMessageBox::critical(this, "Error", "No se pudo crear el archivo de video.");
@@ -551,7 +601,7 @@ void MainWindow::generarVideoCortes() {
         cv::Mat suavizado;
         cv::medianBlur(claheResult, suavizado, 5);
 
-        // Aquí agregamos el filtro Laplaciano
+        // Filtro Laplaciano
         cv::Mat laplace;
         cv::Laplacian(suavizado, laplace, CV_16S, 3);
         cv::convertScaleAbs(laplace, laplace);
@@ -584,7 +634,5 @@ void MainWindow::generarVideoCortes() {
     }
 
     writer.release();
-    QMessageBox::information(this, "Video generado",
-                             QString("Video guardado en:\n%1/transicion.avi")
-                                 .arg(QString::fromStdString(dirSalida)));
+
 }

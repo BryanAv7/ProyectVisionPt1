@@ -29,7 +29,8 @@ private slots:
     void cargarImagen();
     void cargarMascara();
     void guardarTodo();
-    void generarVideoCortes();
+    void generarVideoCortes(const std::string& nombreArchivoVideo);
+    void limpiarInterfaz();
 
 private:
     Ui::MainWindow *ui;
@@ -39,6 +40,7 @@ private:
     using Imagen3DUChar = itk::Image<unsigned char, 3>;
     using Imagen2DFloat = itk::Image<float, 2>;
     using Imagen2DUChar = itk::Image<unsigned char, 2>;
+    QString rutaImagenOriginal; // Variable auxiliar
 
     // Volúmenes cargados
     Imagen3DFloat::Pointer volumenOriginal;
@@ -66,6 +68,8 @@ private:
     void actualizarVisualizacionCorte();
     void procesarYMostrarCorte(typename Imagen2DFloat::Pointer corteOriginal,
                                typename Imagen2DUChar::Pointer corteMascara);
+
+    std::string generarNombreUnico(const std::string& rutaBase, const std::string& extension);
 };
 
 #endif // MAINWINDOW_H

@@ -40,6 +40,7 @@ public:
     QTextEdit *textEdit_5;
     QTextEdit *textEdit_6;
     QTextEdit *textEdit_7;
+    QPushButton *btnClear;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -48,7 +49,7 @@ public:
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName("MainWindow");
         MainWindow->setEnabled(true);
-        MainWindow->resize(1047, 797);
+        MainWindow->resize(1106, 797);
         MainWindow->setStyleSheet(QString::fromUtf8(""));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
@@ -120,12 +121,16 @@ public:
         textEdit_6->setStyleSheet(QString::fromUtf8("border: none; background-color: transparent;"));
         textEdit_7 = new QTextEdit(centralwidget);
         textEdit_7->setObjectName("textEdit_7");
-        textEdit_7->setGeometry(QRect(900, 710, 171, 51));
+        textEdit_7->setGeometry(QRect(960, 710, 171, 51));
         textEdit_7->setStyleSheet(QString::fromUtf8("border: none; background-color: transparent;"));
+        btnClear = new QPushButton(centralwidget);
+        btnClear->setObjectName("btnClear");
+        btnClear->setGeometry(QRect(990, 10, 111, 51));
+        btnClear->setStyleSheet(QString::fromUtf8("background-color: #8B0000;"));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
-        menubar->setGeometry(QRect(0, 0, 1047, 23));
+        menubar->setGeometry(QRect(0, 0, 1106, 23));
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
@@ -203,6 +208,7 @@ public:
 "</style></head><body style=\" font-family:'Ubuntu Sans'; font-size:11pt; font-weight:400; font-style:normal;\">\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt;\">Realizado por:</span></p>\n"
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:14pt;\">   - Bryan Avila</span></p></body></html>", nullptr));
+        btnClear->setText(QCoreApplication::translate("MainWindow", "Limpiar", nullptr));
     } // retranslateUi
 
 };

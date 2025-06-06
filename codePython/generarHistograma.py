@@ -3,9 +3,18 @@ import glob
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Buscar el archivo .csv 
-path_mascara = glob.glob('/home/bryan/proyectoInter/Datoscsv/cortecsv/*.csv')[0]
-path_imagen = glob.glob('/home/bryan/proyectoInter/Datoscsv/originalcsv/*.csv')[0]
+def obtener_ultimo_archivo(path_pattern):
+    archivos = glob.glob(path_pattern)
+    if not archivos:
+        raise FileNotFoundError(f"No se encontraron archivos en: {path_pattern}")
+    # Ordenar archivos por fecha de modificación (de más antiguo a más reciente)
+    archivos_ordenados = sorted(archivos, key=os.path.getmtime)
+    # Tomar el último archivo modificado (más reciente)
+    return archivos_ordenados[-1]
+
+# Obtener último archivo creado/modificado para cada carpeta
+path_mascara = obtener_ultimo_archivo('/home/bryan/proyectoInter/Datoscsv/cortecsv/*.csv')
+path_imagen = obtener_ultimo_archivo('/home/bryan/proyectoInter/Datoscsv/originalcsv/*.csv')
 
 # Carpeta donde se guardará la imagen JPG
 carpeta_resultados = '/home/bryan/proyectoInter/codePython/ResultadosHistograma'
